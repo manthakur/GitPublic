@@ -18,7 +18,9 @@ steps:
     organization: 'dpetrialorg'
     scannerMode: 'Other'
 - task: SonarCloudAnalyze@1
-
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '500'
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
